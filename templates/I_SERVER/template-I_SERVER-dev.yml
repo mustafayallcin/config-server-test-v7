@@ -1,0 +1,505 @@
+application.active-calls-properties.shutdown-button-threshold-minutes:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "Active Calls Shutdown Button Threshold (minutes)"
+  description: "Minutes after which the shutdown button becomes active when there\
+    \ are ongoing calls"
+  sectionName: "ACTIVE_CALLS_SHUTDOWN_THRESHOLD_MINUTES"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: 60
+application.after-conversation-properties.duration-in-seconds:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "After Conversation Duration (seconds)"
+  description: "Duration in seconds the agent remains in the after-conversation state"
+  sectionName: "AFTER_CONVERSATION_DURATION_SECONDS"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: 10
+application.after-conversation-properties.reason:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "After Conversation Reason"
+  description: "Reason label assigned to the after-conversation not-ready state"
+  sectionName: "AFTER_CONVERSATION_REASON"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "after-conversation"
+application.after-conversation-properties.reason-code:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "After Conversation Reason Code"
+  description: "Numeric reason code assigned to the after-conversation not-ready state"
+  sectionName: "AFTER_CONVERSATION_REASON_CODE"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: 0
+application.after-conversation-properties.state:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "After Conversation Agent State"
+  description: "Agent state set automatically after a conversation ends (e.g. NOT_READY,\
+    \ READY)"
+  sectionName: "AFTER_CONVERSATION_STATE"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "NOT_READY"
+application.agent-login-properties.login-state:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Agent Login State"
+  description: "Initial agent state set upon login (e.g. READY, NOT_READY)"
+  sectionName: "AGENT_LOGIN_STATE"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "READY"
+application.agent-login-properties.reason:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Agent Login Reason"
+  description: "Reason label assigned when an agent logs in"
+  sectionName: "AGENT_LOGIN_REASON"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "Login"
+application.agent-login-properties.reason-code:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "Agent Login Reason Code"
+  description: "Numeric reason code assigned when an agent logs in"
+  sectionName: "AGENT_LOGIN_REASON_CODE"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: 0
+application.auto-shutdown-properties.auto-shutdown-cron:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Auto Shutdown Cron Expression"
+  description: "Cron expression controlling how frequently the auto shutdown check\
+    \ runs"
+  sectionName: "AUTO_SHUTDOWN_CRON"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "0 */5 * * * *"
+application.auto-shutdown-properties.enabled:
+  configValueCount: "SINGLE"
+  configValueType: "BOOLEAN"
+  displayName: "Auto Shutdown Enabled"
+  description: "Enables or disables the automatic shutdown mechanism for idle instances"
+  sectionName: "AUTO_SHUTDOWN_ENABLED"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: true
+application.auto-shutdown-properties.threshold-duration-in-milli-seconds:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "Auto Shutdown Threshold Duration (ms)"
+  description: "Idle duration in milliseconds after which auto shutdown is triggered"
+  sectionName: "AUTO_SHUTDOWN_THRESHOLD_MS"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: 21600000
+application.health-management.external-targets[0].name:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Health Check External Target Name"
+  description: "Display name of the external health check target (e.g. SistasSVR SipRec)"
+  sectionName: "HEALTH_MGMT_EXTERNAL_TARGET_NAME"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "SistasSVR SipRec"
+application.health-management.external-targets[0].url:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Health Check External Target URL"
+  description: "Health check endpoint URL of the external target service"
+  sectionName: "HEALTH_MGMT_EXTERNAL_TARGET_URL"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "https://siprec.example.com:4301/healthchecks-api"
+application.health-management.scheduler-cron:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Health Management Scheduler Cron Expression"
+  description: "Cron expression controlling how frequently external health targets\
+    \ are checked"
+  sectionName: "HEALTH_MGMT_SCHEDULER_CRON"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "*/5 * * * * *"
+application.health-management.scheduler-enabled:
+  configValueCount: "SINGLE"
+  configValueType: "BOOLEAN"
+  displayName: "Health Management Scheduler Enabled"
+  description: "Enables or disables the scheduled external health check monitoring"
+  sectionName: "HEALTH_MGMT_SCHEDULER_ENABLED"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: true
+application.microservice-configuration.hazelcast.discovery-mechanism:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Hazelcast Discovery Mechanism"
+  description: "Hazelcast cluster discovery mechanism (e.g. lite_member, native_client)"
+  sectionName: "HAZELCAST_DISCOVERY_MECHANISM"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: "lite_member"
+application.microservice-configuration.hazelcast.lite-member.cluster-members:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Hazelcast Lite Member Cluster Members"
+  description: "Comma-separated Eureka service name(s) of the Hazelcast cluster to\
+    \ join as a lite member"
+  sectionName: "HAZELCAST_LITE_MEMBER_CLUSTER_MEMBERS"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: "iserver"
+application.microservice-configuration.hazelcast.lite-member.instance-port-padding:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "Hazelcast Lite Member Instance Port Padding"
+  description: "Port offset added to server.port to determine the Hazelcast member\
+    \ port (server.port + padding)"
+  sectionName: "HAZELCAST_LITE_MEMBER_PORT_PADDING"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: 5701
+application.providers.alcatel-enabled:
+  configValueCount: "SINGLE"
+  configValueType: "BOOLEAN"
+  displayName: "Alcatel Provider Enabled"
+  description: "Enables or disables the Alcatel telephony provider integration"
+  sectionName: "PROVIDER_ALCATEL_ENABLED"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: false
+application.providers.cc-enabled:
+  configValueCount: "SINGLE"
+  configValueType: "BOOLEAN"
+  displayName: "CC Provider Enabled"
+  description: "Enables or disables the Contact Center (CC) telephony provider integration"
+  sectionName: "PROVIDER_CC_ENABLED"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: false
+application.providers.genesys-enabled:
+  configValueCount: "SINGLE"
+  configValueType: "BOOLEAN"
+  displayName: "Genesys Provider Enabled"
+  description: "Enables or disables the Genesys Engage telephony provider integration"
+  sectionName: "PROVIDER_GENESYS_ENABLED"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: false
+application.providers.sisphone-enabled:
+  configValueCount: "SINGLE"
+  configValueType: "BOOLEAN"
+  displayName: "SisPhone Provider Enabled"
+  description: "Enables or disables the SisPhone telephony provider integration"
+  sectionName: "PROVIDER_SISPHONE_ENABLED"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: true
+application.socket-timeout-duration-in-seconds:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "Socket Timeout Duration (seconds)"
+  description: "Timeout in seconds for socket connections to telephony providers"
+  sectionName: "SOCKET_TIMEOUT_DURATION_SECONDS"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: 5
+eureka.client.service-url.defaultZone:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Eureka Default Zone URL"
+  description: "Eureka server URL including basic auth credentials for service registration"
+  sectionName: "EUREKA_DEFAULT_ZONE"
+  encrypted: true
+  rule: null
+  restartRequired: true
+  defaultValue: "http://USERNAME:PASSWORD@localhost:8761/eureka/"
+kafka.agentMessageTopic:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Kafka Agent Message Topic"
+  description: "Kafka topic name for agent status and state messages"
+  sectionName: "KAFKA_AGENT_MESSAGE_TOPIC"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "AGENT_MESSAGE_TOPIC"
+kafka.bootstrap-servers:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Kafka Bootstrap Servers"
+  description: "Comma-separated list of Kafka broker addresses"
+  sectionName: "KAFKA_BOOTSTRAP_SERVERS"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: "127.0.0.1:9092"
+kafka.callMessageTopic:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Kafka Call Message Topic"
+  description: "Kafka topic name for call event messages"
+  sectionName: "KAFKA_CALL_MESSAGE_TOPIC"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "CALL_MESSAGE_TOPIC"
+kafka.configChangeTopic:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Kafka Config Change Topic"
+  description: "Kafka topic name used for broadcasting configuration change events"
+  sectionName: "KAFKA_CONFIG_CHANGE_TOPIC"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "CONFIG_CHANGE_TOPIC"
+kafka.consumer.group.id:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Kafka Consumer Group ID"
+  description: "Consumer group ID for the main Kafka consumer"
+  sectionName: "KAFKA_CONSUMER_GROUP_ID"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: "i-server"
+kafka.fromAlcatelToInteractionTopic:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Kafka Topic - Alcatel to Interaction"
+  description: "Kafka topic name for messages sent from Alcatel provider to Interaction\
+    \ server"
+  sectionName: "KAFKA_TOPIC_ALCATEL_TO_INTERACTION"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "FROM_ALCATEL_TO_INTERACTION_TOPIC"
+kafka.fromGenesysEngageToInteractionTopic:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Kafka Topic - Genesys Engage to Interaction"
+  description: "Kafka topic name for messages sent from Genesys Engage to Interaction\
+    \ server"
+  sectionName: "KAFKA_TOPIC_GENESYS_TO_INTERACTION"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "FROM_GENESYS_ENGAGE_TO_INTERACTION_TOPIC"
+kafka.fromInteractionToAlcatelTopic:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Kafka Topic - Interaction to Alcatel"
+  description: "Kafka topic name for messages sent from Interaction server to Alcatel\
+    \ provider"
+  sectionName: "KAFKA_TOPIC_INTERACTION_TO_ALCATEL"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "FROM_INTERACTION_TO_ALCATEL_TOPIC"
+kafka.fromInteractionToGenesysEngageTopic:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Kafka Topic - Interaction to Genesys Engage"
+  description: "Kafka topic name for messages sent from Interaction server to Genesys\
+    \ Engage"
+  sectionName: "KAFKA_TOPIC_INTERACTION_TO_GENESYS"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "FROM_INTERACTION_TO_GENESYS_ENGAGE_TOPIC"
+kafka.fromInteractionToSIPTopic:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Kafka Topic - Interaction to SIP"
+  description: "Kafka topic name for messages sent from Interaction server to SIP\
+    \ provider"
+  sectionName: "KAFKA_TOPIC_INTERACTION_TO_SIP"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "FROM_INTERACTION_TO_SIP_TOPIC"
+kafka.fromInteractionToSisPhoneTopic:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Kafka Topic - Interaction to SisPhone"
+  description: "Kafka topic name for messages sent from Interaction server to SisPhone\
+    \ provider"
+  sectionName: "KAFKA_TOPIC_INTERACTION_TO_SISPHONE"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "FROM_INTERACTION_TO_SISPHONE_TOPIC"
+kafka.fromSIPToInteractionTopic:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Kafka Topic - SIP to Interaction"
+  description: "Kafka topic name for messages sent from SIP provider to Interaction\
+    \ server"
+  sectionName: "KAFKA_TOPIC_SIP_TO_INTERACTION"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "FROM_SIP_TO_INTERACTION_TOPIC"
+kafka.fromSisPhoneToInteractionTopic:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Kafka Topic - SisPhone to Interaction"
+  description: "Kafka topic name for messages sent from SisPhone provider to Interaction\
+    \ server"
+  sectionName: "KAFKA_TOPIC_SISPHONE_TO_INTERACTION"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "FROM_SISPHONE_TO_INTERACTION_TOPIC"
+kafka.generalMessageTopic:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Kafka General Message Topic"
+  description: "Kafka topic name for general broadcast messages"
+  sectionName: "KAFKA_GENERAL_MESSAGE_TOPIC"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "GENERAL_MESSAGE_TOPIC"
+kafka.producer.acks:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Kafka Producer Acks"
+  description: "Acknowledgement level for Kafka producer (e.g. all, 1, 0)"
+  sectionName: "KAFKA_PRODUCER_ACKS"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "all"
+kafka.producer.retries:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "Kafka Producer Retry Count"
+  description: "Number of retries on send failure for the Kafka producer"
+  sectionName: "KAFKA_PRODUCER_RETRIES"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: 3
+kafka.requestMakeCallTopic:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Kafka Topic - Request Make Call (Single SIP)"
+  description: "Kafka topic name for outbound call request messages to a single SIP\
+    \ provider"
+  sectionName: "KAFKA_TOPIC_REQUEST_MAKE_CALL"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: "FROM_INTERACTION_TO_SINGLE_SIP_TOPIC"
+kafka.sendAckTimeoutSeconds:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "Kafka Send Ack Timeout (seconds)"
+  description: "Maximum time in seconds to wait for Kafka send acknowledgement"
+  sectionName: "KAFKA_SEND_ACK_TIMEOUT"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: 10
+kafka.topics.retention:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "Kafka Topic Retention (ms)"
+  description: "Log retention period in milliseconds for Kafka topics"
+  sectionName: "KAFKA_TOPIC_RETENTION_MS"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue: 60000
+security.api-access.access-token:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "API Access Token"
+  description: "Static bearer token used to secure internal API endpoints"
+  sectionName: "API_ACCESS_TOKEN"
+  encrypted: true
+  rule: null
+  restartRequired: false
+  defaultValue: "api-access-token"
+server.port:
+  configValueCount: "SINGLE"
+  configValueType: "LONG"
+  displayName: "Server Port"
+  description: "HTTP port the application listens on"
+  sectionName: "SERVER_PORT"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: 26082
+spring.cloud.stream.kafka.binder.brokers:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "Kafka Stream Binder Brokers"
+  description: "Kafka broker address used by Spring Cloud Stream binder"
+  sectionName: "KAFKA_STREAM_BINDER_BROKERS"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: "127.0.0.1:9092"
+spring.security.oauth2.client.provider.oidc.issuer-uri:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "OIDC Issuer URI"
+  description: "Keycloak realm issuer URI used for OAuth2 token validation"
+  sectionName: "OIDC_ISSUER_URI"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: "https://keycloak.example.com/realms/sistas"
+spring.security.oauth2.client.registration.oidc.client-id:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "OAuth2 Client ID"
+  description: "OAuth2 client ID registered in Keycloak for this service"
+  sectionName: "OAUTH2_CLIENT_ID"
+  encrypted: false
+  rule: null
+  restartRequired: true
+  defaultValue: "chatbot"
+spring.security.oauth2.client.registration.oidc.client-secret:
+  configValueCount: "SINGLE"
+  configValueType: "STRING"
+  displayName: "OAuth2 Client Secret"
+  description: "OAuth2 client secret registered in Keycloak for this service"
+  sectionName: "OAUTH2_CLIENT_SECRET"
+  encrypted: true
+  rule: null
+  restartRequired: true
+  defaultValue: "oauth2-client-secret"
